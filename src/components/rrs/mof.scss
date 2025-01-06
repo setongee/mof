@@ -1,0 +1,20 @@
+.mof{
+    
+    a{
+        min-width: max-content;
+    }
+
+}
+
+@media(max-width : 850px){
+
+    .mof{
+        .rrsx{
+            justify-content: flex-start;
+            overflow: hidden;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+    }
+
+}

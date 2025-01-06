@@ -1,0 +1,18 @@
+.empty__tray__page{
+
+    height: 100vh !important;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+
+}
+
+.headPin{
+    z-index: 999999999;
+    width: 100%;
+    top: 0;
+}
