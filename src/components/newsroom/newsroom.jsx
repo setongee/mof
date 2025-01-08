@@ -10,7 +10,7 @@ import Container from '../container/Container'
 export default function Newsroom({type}) {
     
     const [news, setNews] = useState([])
-    const topic = "finance"
+    const topic = "Ministry Of Health"
     const {data, isLoading} = useQuery({
 
         queryKey: ["newsroom", 1, topic],

@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    // margin-top: 50px;
+    margin-top: 200px;
 
 }
 
@@ -122,7 +122,7 @@
             line-height: 52px;
 
             span{
-                color: green;
+                color: rgb(0, 255, 0);
             }
         }
 
@@ -179,8 +179,7 @@
 @media(max-width : 600px) {
 
     .contact{
-        margin: 50px auto;
-        margin-top: 40px;
+        margin-top: 180px;
     }
 
     .side1{

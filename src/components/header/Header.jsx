@@ -163,10 +163,6 @@ export default function Header() {
                     <a className='dark  font__12 text__trend letter__spacing__2' href="/newsroom/1"> Newsroom </a>
                   </li>
 
-                  <li id='nav' className='flex flex__align__center' data-navigation = 'resources'>
-                    <a className='dark  font__12 text__trend letter__spacing__2' href="/resources"> Resources </a>
-                  </li>
-
                   <li id='nav' className='flex flex__align__center' data-navigation = 'connect'>
                     <a className='dark  font__12 text__trend letter__spacing__2' href="/connect">Connect</a>
                   </li>
