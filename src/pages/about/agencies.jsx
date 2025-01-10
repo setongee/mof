@@ -34,67 +34,6 @@ export default function Agencies() {
 
               <section id="directorates" className = "multi" >
 
-                  <h1>Agencies</h1>
-
-                  <div className="mda__card__ui flex gap__20">
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {units} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                              <p> Lagos State Science Research and Innovation Council (LASRIC) </p>
-                              <span> <Cellar/> Agency</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {units} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                              <p> Cyber Security Advisory Council </p>
-                              <span> <Cellar/> Agency </span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {units} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                              <p> Lagos State Residents Registration Agency (LASRRA) </p>
-                              <span> <Cellar/> Agency</span>
-                          </div>
-
-                      </div>
-
-                  </div>
-
-              </section>
-
-              <section id="directorates" className = "multi" >
-
                   <h1>Departments</h1>
 
                   <div className="mda__card__ui flex gap__20">
@@ -110,8 +49,10 @@ export default function Agencies() {
                           </div>
 
                           <div className="card__content">
-                              <p>Administration and Human Resources [A & HR]</p>
-                              <span> <Cellar/> Departments</span>
+
+                            <p>Administration and Human Resources</p>
+                            <span> <Cellar/> Directorates</span>
+                              
                           </div>
 
                       </div>
@@ -127,7 +68,43 @@ export default function Agencies() {
                           </div>
 
                           <div className="card__content">
-                          <p>Finance and {<br></br>} Accounts [F & A]</p>
+
+                            <p>Debt Management Department</p>
+                            <span> <Cellar/> Directorates</span>
+
+                          </div>
+
+                      </div>
+
+                      <div className="mda__card">
+
+                          <div className="iconHolder">
+
+                              <div className="card__photo">
+                                  <img src = {dept} />
+                              </div>
+
+                          </div>
+
+                          <div className="card__content">
+                            <p>Insurance Department</p>
+                            <span> <Cellar/> Directorates</span>
+                          </div>
+
+                      </div>
+
+                      <div className="mda__card">
+
+                          <div className="iconHolder">
+
+                              <div className="card__photo">
+                                  <img src = {dept} />
+                              </div>
+
+                          </div>
+
+                          <div className="card__content">
+                          <p>Account Department</p>
                           <span> <Cellar/> Directorates</span>
                           </div>
 
@@ -144,7 +121,7 @@ export default function Agencies() {
                           </div>
 
                           <div className="card__content">
-                          <p> Information Communication Technology[ICT]</p>
+                          <p>Taxation and Revenue</p>
                           <span> <Cellar/> Directorates</span>
                           </div>
 
@@ -161,24 +138,7 @@ export default function Agencies() {
                           </div>
 
                           <div className="card__content">
-                          <p>Science, Policy, Programmes and Promotion[SPPP]</p>
-                          <span> <Cellar/> Directorates</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {dept} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Computer Services [CS]</p>
+                          <p>Research and Statistics</p>
                           <span> <Cellar/> Directorates</span>
                           </div>
 
@@ -193,6 +153,23 @@ export default function Agencies() {
                   <h1>Units</h1>
 
                   <div className="mda__card__ui flex gap__20">
+
+                      <div className="mda__card">
+
+                          <div className="iconHolder">
+
+                              <div className="card__photo">
+                                  <img src = {agency} />
+                              </div>
+
+                          </div>
+
+                          <div className="card__content">
+                          <p>Estacode and Parastatals monitoring </p>
+                          <span> <City/> Units</span>
+                          </div>
+
+                      </div>
 
                       <div className="mda__card">
 
@@ -222,7 +199,7 @@ export default function Agencies() {
                           </div>
 
                           <div className="card__content">
-                          <p>The Internal Audit</p>
+                          <p>Audit Unit</p>
                           <span> <City/> Units</span>
                           </div>
 
@@ -239,58 +216,7 @@ export default function Agencies() {
                           </div>
 
                           <div className="card__content">
-                          <p>Planning</p>
-                          <span> <City/> Units</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {agency} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Procurement</p>
-                          <span> <City/> Units</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {agency} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Engineering</p>
-                          <span> <City/> Units</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {agency} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Legal</p>
+                          <p>ICT Unit</p>
                           <span> <City/> Units</span>
                           </div>
 
