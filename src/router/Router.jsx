@@ -12,6 +12,7 @@ import Agencies from '../pages/about/agencies';
 import News_Events from '../pages/news_events/News_Events';
 import News_view from '../pages/news_events/news_view';
 import Connect from '../pages/connect/connect';
+import Authy from '../admin/authy';
 
   const router = createBrowserRouter([
     {
@@ -60,6 +61,19 @@ import Connect from '../pages/connect/connect';
         {
           path : "connect",
           element : <Connect/>
+        },
+        {
+          path : "admin",
+          children : [
+            {
+              path : "",
+              element : <Authy/>
+            },
+            {
+              path : ":page",
+              element : <Authy/>
+            }
+          ]
         }
       ]
     }

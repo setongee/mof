@@ -15,6 +15,8 @@
     "date-fns": "^4.1.0",
     "express": "^4.21.2",
     "iconoir-react": "^7.8.0",
+    "primereact": "^10.9.1",
+    "quill": "^2.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
