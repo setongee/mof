@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import Container from '../../components/container/Container'
 import '../../styles/card__ui.scss'
 import { ArrowUpRight, Cellar, City, Hospital } from 'iconoir-react'
@@ -8,9 +8,53 @@ import Footer from '../../components/footer/footerArea'
 import agency from '../../assets/MDA/agency.svg'
 import dept from '../../assets/MDA/department.svg'
 import units from '../../assets/MDA/ministry.svg'
+import { getAdminData } from '../../api/core/admin'
 
 export default function Agencies() {
+
+const[data, setData] = useState({})
+
+useEffect(() => {
+
+getAdminData("mof")
+.then( res =>{
+
+    refixArr(res[0].agencies)
+
+} )
+
+}, []); 
+
+const refixArr = (q) => {
+
+    const newObj = {};
+
+    q.forEach(e => {
+        
+        if(!newObj[e.category]){
+
+            newObj[e.category] = { name : e.category, data : [] }
+
+        }
+
+        newObj[e.category].data.push(e)
+
+    });
+
+    setData(newObj);
+
+}
+
+// const refixArr = (q) => {
+
+//     const result = Object.groupBy(q, ( { category } ) => category);
+//     setData(result)
+
+// }
+
   return (
+
+
     <div className="about__sections">
 
         <Container>
@@ -31,200 +75,46 @@ export default function Agencies() {
             </div>
 
             <div id="agency">
+            
+                {
+                    Object.entries(data).map( (e, index) => (
 
-              <section id="directorates" className = "multi" >
+                        <section id={ e[0] === "department" ? "directorates" : e[0] } className = "multi" key = {index}>
 
-                  <h1>Departments</h1>
+                            <h1> {e[0]} </h1>
 
-                  <div className="mda__card__ui flex gap__20">
+                            <div className="mda__card__ui flex gap__20">
 
-                      <div className="mda__card">
+                                {
+                                    e[1].data.map( (res, index) => (
 
-                          <div className="iconHolder">
+                                        <div className="mda__card" key = {index}>
 
-                              <div className="card__photo">
-                                  <img src = {dept} />
-                              </div>
+                                            <div className="iconHolder">
 
-                          </div>
+                                                <div className="card__photo">
+                                                    <img src = {dept} />
+                                                </div>
 
-                          <div className="card__content">
+                                            </div>
 
-                            <p>Administration and Human Resources</p>
-                            <span> <Cellar/> Directorates</span>
-                              
-                          </div>
+                                            <div className="card__content">
 
-                      </div>
+                                            <p>{res.name}</p>
+                                            <span> <Cellar/> {e[0]} </span>
+                                                
+                                            </div>
 
-                      <div className="mda__card">
+                                        </div>
+                                    ) )
+                                }
 
-                          <div className="iconHolder">
+                            </div>
 
-                              <div className="card__photo">
-                                  <img src = {dept} />
-                              </div>
+                        </section>
 
-                          </div>
-
-                          <div className="card__content">
-
-                            <p>Debt Management Department</p>
-                            <span> <Cellar/> Directorates</span>
-
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {dept} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                            <p>Insurance Department</p>
-                            <span> <Cellar/> Directorates</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {dept} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Account Department</p>
-                          <span> <Cellar/> Directorates</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {dept} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Taxation and Revenue</p>
-                          <span> <Cellar/> Directorates</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {dept} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Research and Statistics</p>
-                          <span> <Cellar/> Directorates</span>
-                          </div>
-
-                      </div>
-
-                  </div>
-
-              </section>
-
-              <section id="units" className = "multi" >
-
-                  <h1>Units</h1>
-
-                  <div className="mda__card__ui flex gap__20">
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {agency} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Estacode and Parastatals monitoring </p>
-                          <span> <City/> Units</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {agency} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Public Affairs</p>
-                          <span> <City/> Units</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {agency} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>Audit Unit</p>
-                          <span> <City/> Units</span>
-                          </div>
-
-                      </div>
-
-                      <div className="mda__card">
-
-                          <div className="iconHolder">
-
-                              <div className="card__photo">
-                                  <img src = {agency} />
-                              </div>
-
-                          </div>
-
-                          <div className="card__content">
-                          <p>ICT Unit</p>
-                          <span> <City/> Units</span>
-                          </div>
-
-                      </div>
-
-                  </div>
-
-              </section>
+                     ) )
+                }
               
           </div>
 

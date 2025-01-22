@@ -1,11 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './about.scss'
 import Container from '../../components/container/Container'
 import Button from '../../components/button/Button'
 import Footer from '../../components/footer/footerArea'
+import { getAdminData } from '../../api/core/admin'
 
 export default function Vision() {
+
+  const[data, setData] = useState({})
+
+  useEffect(() => {
+
+    getAdminData("mof")
+    .then( res => setData(res[0]) )
+
+  }, []);
+
+  console.log(data)
+
   return (
+
     <div className="about">
 
       <Container>
@@ -31,14 +45,14 @@ export default function Vision() {
             <div className="h">
               Vision Statement
             </div>
-            <p>To Transform Lagos State Office of Finance into the Model Manager for Public Finance in Africa.</p>
+            <p> {data?.vision} </p>
           </div>
 
           <div className="aim">
             <div className="h">
               Mission Statement
             </div>
-            <p>Committed to Effective Financial Risk Management, and leveraging on Private Sector Participation towards Achieving the Needs and Aspirations of Government and People of Lagos State.</p>
+            <p> {data?.mission} </p>
           </div>
 
         </div>
