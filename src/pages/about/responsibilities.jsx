@@ -63,13 +63,6 @@ console.log(data.responsibilities)
                     </div>
                     
                 </div>
-
-                {/* <div className="otherLinks">
-                    <p>See also : </p>
-                    <div className="links__quick">
-                        <span> Vision, Mission & Structure </span>
-                    </div>
-                </div> */}
             </Container>
 
             <Footer/>
