@@ -136,27 +136,21 @@ export default function Header() {
                   <li id='nav' className='flex flex__align__center' data-navigation = 'home'>
                     <a className='dark  font__12 text__trend letter__spacing__2' href="/home"> Home </a>
                   </li>
-                  
-                  <li id='nav' className='flex flex__align__center dropdown__sm' data-navigation = 'about'>
 
-                    <a className={ `dark  font__12 text__trend letter__spacing__2 ${isDropdown ? "drop__active" : ""}`} onClick={ () => setIsDropdown(!isDropdown) } > About </a>
+                  <li id='nav' className='flex flex__align__center' data-navigation = 'about'>
+                    <a className='dark  font__12 text__trend letter__spacing__2' href="/about/vision"> Vision & Mission </a>
+                  </li>
 
-                    {
-                      
-                      isDropdown ? 
+                  <li id='nav' className='flex flex__align__center' data-navigation = 'about'>
+                    <a className='dark  font__12 text__trend letter__spacing__2' href="/about/responsibilities"> Ministerial Mandates </a>
+                  </li>
 
-                      <div className="drop__items">
+                  <li id='nav' className='flex flex__align__center' data-navigation = 'about'>
+                    <a className='dark  font__12 text__trend letter__spacing__2' href="/about/people"> Top Management </a>
+                  </li>
 
-                        <a className='dark  font__12 text__trend letter__spacing__2' href="/about/vision"> Vision & Mission </a>
-                        <a className='dark  font__12 text__trend letter__spacing__2' href="/about/responsibilities"> Ministerial Mandates </a>
-                        <a className='dark  font__12 text__trend letter__spacing__2' href="/about/people"> Top Management </a>
-                        <a className='dark  font__12 text__trend letter__spacing__2' href="/about/agencies_directorates_units"> Agencies </a>
-                      
-                      </div> : null
-
-                    }
-
-
+                  <li id='nav' className='flex flex__align__center' data-navigation = 'about'>
+                    <a className='dark  font__12 text__trend letter__spacing__2' href="/about/agencies_directorates_units"> Agencies </a>
                   </li>
 
                   <li id='nav' className='flex flex__align__center' data-navigation = 'newsroom'>
